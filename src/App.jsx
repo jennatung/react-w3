@@ -169,7 +169,7 @@ function App() {
   useEffect(()=>{
     const token = document.cookie.split("; ")
     .find((row)=>row.startsWith("hexToken="))
-    .split("=")[1];
+    ?.split("=")[1];
 
     if (token) {
       axios.defaults.headers.common.Authorization = token;
